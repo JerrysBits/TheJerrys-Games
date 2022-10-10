@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <title>TheJerrys Game</title>
+
+    
+    <link href="https://fonts.googlepis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- ICONS AND FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Roboto:wght@400;900&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Macondo&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Macondo&amp;display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&amp;display=swap" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Macondo&display=swap">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="top-nav" style="display: none;">
+            
+            <div class="logo-icon">
+                <a href="#top-header">
+                    <img src="images//TheJerrys_Banner.png" alt="">
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="#" id="about">About this game</a> 
+                </li>
+                <li>
+                    <a href="#" id="howToPlay">How To Play</a>
+                </li>
+                <li>
+                    <a href="#" id="contact">Contact Us</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <div class="mobileBar">
+            <!-- Mobile Menu Hero Container -->
+           <div class="mobile-menu-container">
+               <ul class="nav-bar">
+                    <li>
+                        <div class="logo-icon">
+                            <a href="#top-header">
+                                <img src="images//TheJerrys_Banner.png" alt="">
+                            </a>
+                        </div>
+                    </li>
+                   <li>
+                        <a href="#about" id="about">About this game</a>
+                   </li>
+                   <li>
+                        <a href="#howToPlay" id="howToPlay">How To Play</a> 
+                   </li>
+                   <li>
+                       <a href="#contact" id="contact">Contact Us</a>
+                   </li>
+                   <li>
+                        <div class="copyrightMsg">
+                            <div>Redesigned by</div>
+                            <a target="_blank" href="https://temitope-olusanya.blogspot.com" class="theDeveloper">Temitope Olusanya</a>
+                            <div>&copy; 2022</div>
+                        </div>
+                        
+                   </li>
+               </ul>
+           </div>
+
+           <div class="mobileMenu">
+               <a class="menu-btn" href="#top-header"> 
+                   <img class="menuIcon" src="images/menu.png" alt="" />
+               </a>
+           </div>
+       </div>
+   
+
+
+        <div class="addDivSpace_1">
+
+        </div>
+
+        <div class="startGame active" id="startGame">
+            <button id="startGameBtn" onclick="startGame();" class="startGameBtn">Enter the Game World</button>
+        </div>
+
+            <img id="Phone_Grass" src="images/Phone_Grass_Banner.jpg">
+
+            <div class="gameWorld">
+                <canvas class="canvasLoad" id="canvas1"></canvas>
+
+                <!--    Characters  -->
+                <img id="player" src="Game Assets/player.png">
+                <img id="angler1" src="Game Assets/Enemies/angler1.png">
+                <img id="angler2" src="Game Assets/Enemies/angler2.png">
+                <img id="lucky" src="Game Assets/Enemies/lucky.png">
+                <img id="hivewhale" src="Game Assets/Enemies/hivewhale.png">
+                <img id="drone" src="Game Assets/Enemies/drone.png">
+
+                <!--    Props   -->
+                <img id="projectile" src="Game Assets/projectile.png">
+                <img id="gears" src="Game Assets/gears.png">
+                <img id="smokeExplosion" src="Game Assets/Collision Animations/smokeExplosion.png">
+                <img id="fireExplosion" src="Game Assets/Collision Animations/fireExplosion.png">
+
+                <!--    Environment -->
+                <img id="layer1" src="Game Assets/Backgrounds/layer1.png">
+                <img id="layer2" src="Game Assets/Backgrounds/layer2.png">
+                <img id="layer3" src="Game Assets/Backgrounds/layer3.png">
+                <img id="layer4" src="Game Assets/Backgrounds/layer4.png">
+            </div>
+
+                <!--    Buttons    -->
+                <div class="gameBtn" id="gameBtn">
+                    <div class="shootBtn column" id="shootBtn">
+                        <button id="shoot-Btn" class="shoot-Btn active">Shoot</button>
+                    </div>
+                        
+                    <div class="directionButtons column">
+                        <div class="top-btn" id="top-btn">
+                            <i class="fa fa-chevron-up" id="chevron-up"></i>
+                        </div>
+
+                        <div class="bottom-btn" id="bottom-btn">
+                            <i class="fas  fa-chevron-down" id="chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <!--FOOTER
+            <footer>
+                This short game was Redesigned by <a target="_blank" href="https://temitope-olusanya.blogspot.com" class="theDeveloper">Temitope Olusanya</a>  &copy; 2022
+            </footer> --> 
+
+            
+            <!-- Bouncing div -->
+            <div class="ball"></div>
+
+        </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
