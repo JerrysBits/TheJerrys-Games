@@ -14,7 +14,7 @@ body {
     text-align: unset;
     justify-content: center;
     margin: 0 auto;
-    width: 1024px;
+    /*width: 1024px;*/
     box-shadow: 1px 18px 18px -5px rgba(0, 0, 0, 0.3);
 }
 .mobileMenu {
