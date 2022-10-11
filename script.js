@@ -55,8 +55,7 @@ function startGame(){
                 window.addEventListener('keydown', e => {
 
                     if ((   (e.key === 'ArrowUp') ||
-                            (e.key === 'ArrowDown') ||
-                            (downButton.clicked() === true)
+                            (e.key === 'ArrowDown')
                     ) && this.game.keys.indexOf(e.key) === -1){
                         this.game.keys.push(e.key);
                     } else if ((e.key === ' ') || (e.key === '5') || (e.key === 'click')){
