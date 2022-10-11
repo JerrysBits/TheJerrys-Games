@@ -34,6 +34,10 @@ mobileMenuItems.forEach(i => {
 function startGame(){   
     startGameBtn.addEventListener('click', function(){
         canvas.classList.add('active');
+        shootButton.classList.add('active');
+        topButton.classList.add('active');
+        downButton.classList.add('active');
+
         const isActive = canvas.classList.contains('active');
         showStartBtn.classList.remove('active');
 
